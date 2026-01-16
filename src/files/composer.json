@@ -1,0 +1,24 @@
+{
+  "name": "cryodrift/files",
+
+  "description": "Database file storage",
+  "type": "library",
+  "license": "MIT",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "chrisg"
+    }
+  ],
+  "require": {
+    "php": ">=8.4",
+    "cryodrift/fw": "^0.1.0",
+    "cryodrift/user": "^0.1.0",
+    "cryodrift/uploader": "^0.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "cryodrift\\files\\": ""
+    }
+  }
+}
