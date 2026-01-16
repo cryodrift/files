@@ -1,0 +1,33 @@
+<div class="{{g-container-full}}">
+
+    <div class="{{g-container-full}}">
+        <div class="g-fc g-h">
+            <div class="{{g-box-body}} g-fw g-tusn g-tjcb">
+                <div id="files_search" class="{{g-container}}">
+                    {{api_files_search}}
+                </div>
+                <div id="move-path" class="gs-gg1 g-fr g-bc g-mbc g-mtc g-pb g-p1c g-dh">
+                    <select class="g-btr g-bbr g-pb g-pt" name="move_dir">
+                        {{api_files_dirlist}}
+                    </select>
+                    <label class="g-btr g-bbr g-c" data-click="collect|button[name=uploads_select][selected=selected]|input[name=move_path]|select[name=move_dir] send|collection|id,value|/files/api/move refresh|/memo/api/files|html,#files,inner refresh|/memo/api/files_dirlist|html,select[name=move_dir],inner">To</label>
+                    <input class="g-btr g-bbr" type="text" name="move_path" placeholder="insert path ..." value="">
+                </div>
+                <div class="{{g-container}}">
+                    <div class="{{g-container}}">
+                        <button class="{{g-button}}" data-click="hide|#files-tab show|#uploads-tab" type="button">Upload</button>
+                        <button class="{{g-button}}" data-click="toggleclass|#move-path|g-dh" type="button">Move</button>
+                        <button name="files_delete" class="{{g-button}}" data-click="ask|Wirklich|löschen collect|button[name=uploads_select][selected=selected] send|collection|id|/memo/api/files_delete remelems|collection|id|file_" type="button">Delete</button>
+                        <button name="files_undelete" class="{{g-button}} g-dh" data-click="ask|Wirklich|löschen collect|button[name=uploads_select][selected=selected] send|collection|id|/memo/api/files_undelete remelems|collection|id|file_" type="button">Restore</button>
+                        <button class="{{g-button}}" data-click="click|button[name=uploads_select]" type="button">Select All</button>
+                    </div>
+                    {{api_files_menu}}
+                </div>
+
+            </div>
+            <div id="files" class="{{g-scroll}} {{g-box-body}} {{g-box}}" data-scrollable="files">
+                {{api_files}}
+            </div>
+        </div>
+    </div>
+</div>
